@@ -14,7 +14,7 @@ dependencies:
   equatable: ^1.1.1
   shared_preferences: ^0.5.6+3
   flutter_localized_locales: ^1.1.1
-
+  google_fonts: 0.3.10
 dev_dependencies:
   flutter_test:
     sdk: flutter

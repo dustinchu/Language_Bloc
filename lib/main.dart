@@ -33,7 +33,7 @@ class App extends StatelessWidget {
       builder: (context, state) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          theme: theme,
+          // theme: theme,
           home: HomePage(),
           title: 'Flutter Intl Example',
           localizationsDelegates: [
