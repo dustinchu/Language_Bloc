@@ -26,8 +26,8 @@ const ColorScheme kColorScheme = ColorScheme(
   brightness: Brightness.light,
 );
 
-TextTheme _buildTextTheme(TextTheme base, String language) {
-  return kTextTheme(base, language)
+TextTheme _buildTextTheme(TextTheme base) {
+  return kTextTheme(base )
       .copyWith(
         headline: base.headline
             .copyWith(fontWeight: FontWeight.w500, color: Colors.red),
@@ -54,7 +54,7 @@ TextTheme _buildTextTheme(TextTheme base, String language) {
 
 
 
-ThemeData buildLightTheme(String language) {
+ThemeData buildLightTheme() {
   final ThemeData base = ThemeData.light();
   return base.copyWith(
     //  primaryColor:
@@ -69,9 +69,9 @@ ThemeData buildLightTheme(String language) {
         buttonColor: kDarkBG),
     primaryColorLight: kLightBG,
     primaryIconTheme: _customIconTheme(base.iconTheme),
-    textTheme: _buildTextTheme(base.textTheme, language),
-    primaryTextTheme: _buildTextTheme(base.primaryTextTheme, language),
-    accentTextTheme: _buildTextTheme(base.accentTextTheme, language),
+    textTheme: _buildTextTheme(base.textTheme),
+    primaryTextTheme: _buildTextTheme(base.primaryTextTheme),
+    accentTextTheme: _buildTextTheme(base.accentTextTheme),
     iconTheme: _customIconTheme(base.iconTheme),
     hintColor: Colors.black26,
     backgroundColor: Colors.white,
@@ -95,18 +95,18 @@ ThemeData buildLightTheme(String language) {
   );
 }
 
-ThemeData buildDarkTheme(String language) {
+ThemeData buildDarkTheme() {
   final ThemeData base = ThemeData.dark();
   return base.copyWith(
-    textTheme: _buildTextTheme(base.textTheme, language).apply(
+    textTheme: _buildTextTheme(base.textTheme).apply(
       displayColor: kLightBG,
       bodyColor: kLightBG,
     ),
-    primaryTextTheme: _buildTextTheme(base.primaryTextTheme, language).apply(
+    primaryTextTheme: _buildTextTheme(base.primaryTextTheme).apply(
       displayColor: kLightBG,
       bodyColor: kLightBG,
     ),
-    accentTextTheme: _buildTextTheme(base.accentTextTheme, language).apply(
+    accentTextTheme: _buildTextTheme(base.accentTextTheme).apply(
       displayColor: kLightBG,
       bodyColor: kLightBG,
     ),
