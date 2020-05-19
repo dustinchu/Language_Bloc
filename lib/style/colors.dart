@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_validation/common/tools.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 const kEmptyColor = 0XFFF2F2F2;
 
@@ -51,3 +52,18 @@ const kOrderStatusColor = {
   "pendding": "#e5e5e5",
   "on-hold": "#f7deaa"
 };
+mixin Coolors {
+  static const Color primaryColor = Color(0xff252733);
+  static const Color secondaryColor = Color(0xff333645);
+  static Color accentColor = Vx.purple400;
+  static List<Color> colors = [
+    Vx.green400,
+    Vx.yellow400,
+    Vx.blue400,
+    Vx.red400,
+    Vx.teal400,
+    Vx.orange400,
+    Vx.pink400,
+    Vx.purple400,
+  ];
+}

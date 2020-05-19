@@ -6,15 +6,12 @@ class ThemeRepositoryImpl implements ThemeRepository {
 
   @override
   Future<bool>  darkTheme() async {
- 
     final prefs = await SharedPreferences.getInstance();
-    
       final localeTheme = prefs.getBool(_localeTheme);
       if (localeTheme == null) {
         return true;
       }
       return localeTheme;
-   
   }
 
   @override

@@ -17,16 +17,15 @@ class ThemeBloc extends Bloc<ThemeEvent, ThemeState> {
     ThemeEvent event,
   ) async* {
     if (event is ThemeChange) {
-      try{
-         final themeState = state;
-      if (themeState is ThemeLoad) {
-        await _themeRepositoryImpl.saveTheme(!themeState.themeState);
-        yield ThemeLoad(themeState: !themeState.themeState);
+      try {
+        final themeState = state;
+        if (themeState is ThemeLoad) {
+          await _themeRepositoryImpl.saveTheme(!themeState.themeState);
+          yield ThemeLoad(themeState: !themeState.themeState);
+        }
+      } catch (_) {
+        yield ThemeLoad(themeState: true);
       }
-      }catch(_){
-         yield ThemeLoad(themeState: true);
-      }
-     
     }
     if (event is ThemeLoaded) {
       try {

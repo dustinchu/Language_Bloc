@@ -11,7 +11,6 @@ class ThemeInitial extends ThemeState {}
 
 class ThemeLoad extends ThemeState {
   final bool themeState;
-
   const ThemeLoad({
     this.themeState,
   });
