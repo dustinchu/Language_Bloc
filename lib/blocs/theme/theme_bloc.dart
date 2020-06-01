@@ -24,6 +24,7 @@ class ThemeBloc extends Bloc<ThemeEvent, ThemeState> {
           yield ThemeLoad(themeState: !themeState.themeState);
         }
       } catch (_) {
+        print("ERROR${_}");
         yield ThemeLoad(themeState: true);
       }
     }
